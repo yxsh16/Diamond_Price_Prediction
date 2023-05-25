@@ -5,8 +5,8 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
 
-from exception import CustomException
-from logger import logging
+from src.exception import CustomException
+from src.logger import logging
 
 def save_object(file_path, obj):
     try:
@@ -31,13 +31,13 @@ def evaluate_model(X_train,y_train,X_test,y_test,models):
             
 
             # Predict Testing data
-            y_test_pred =model.predict(X_test)
+            y_test_pred = model.predict(X_test)
 
             # Get R2 scores for train and test data
             #train_model_score = r2_score(ytrain,y_train_pred)
             test_model_score = r2_score(y_test,y_test_pred)
 
-            report[list(models.keys())[i]] =  test_model_score
+            report[list(models.keys())[i]] = test_model_score
 
         return report
 
