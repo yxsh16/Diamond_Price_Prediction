@@ -13,7 +13,7 @@ Model used = Linear regression, ridge regression, lasso regression <br>
 
 
 
-# 💿 Installing<br>
+# 💿 Installation<br>
 1. Environment setup.
 ```
 conda create --prefix environ python==3.9 -y
